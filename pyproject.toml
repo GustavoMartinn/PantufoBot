@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "pantufobot-1"
+name = "pantufobot"
 version = "0.1.0"
 description = ""
 authors = ["gumartin6 <<>>"]

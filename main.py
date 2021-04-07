@@ -1,5 +1,6 @@
 import discord
 import os
+
 from keep_alive import keep_alive
 from src.comandos import comandosBasicos
 from src.wordsVerify import wordsVerify

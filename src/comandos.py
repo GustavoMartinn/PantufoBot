@@ -1,6 +1,7 @@
 import requests
 import json
 from src.funcoes.calc import calcula
+from src.funcoes.rolarDado import rolarDado
 
 def get_quote():
   resposta = requests.get("https://zenquotes.io/api/random")
@@ -23,9 +24,16 @@ def comandosBasicos(mensagem):
     return(calcula(mensagem[6:]))
   elif mensagem.startswith('pantufo calcule'):
     return(calcula(mensagem[16:]))
+  #Rolagem de dados
+  elif mensagem.startswith('&rolar'):
+    return(str(rolarDado(mensagem[7:])))
+  elif mensagem.startswith('&roll'):
+    return(str(rolarDado(mensagem[6:])))
+  elif mensagem.startswith('pantufo role'):
+    return(str(rolarDado(mensagem[13:])))
   #agradecimento
   if mensagem.startswith('&obrigado'):
-      return ('magina')
+    return ('magina')
   elif mensagem.startswith('pantufo obrigado'):
     return("magina")
   else:
