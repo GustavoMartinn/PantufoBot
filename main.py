@@ -1,15 +1,23 @@
 import discord
 import os
 from keep_alive import keep_alive
-from comandos import comandosBasicos
-from wordsVerify import wordsVerify
-from authorVerify import authorVerify
+from src.comandos import comandosBasicos
+from src.wordsVerify import wordsVerify
+from src.authorVerify import authorVerify
+from src.onTypingFunc import typing
 
 client = discord.Client()
 
 @client.event
 async def on_ready():
   print('Logado como {0.user}'.format(client))
+
+@client.event
+async def on_typing(channel, user, when):
+  try:
+    await channel.send(typing(channel, user, when))
+  except:
+    return
 
 @client.event
 async def on_message(mensagem):
@@ -50,8 +58,6 @@ async def on_message(mensagem):
       await mensagem.channel.send(authorVerify(mensagem))
     except:
       return
-    
-
 
 keep_alive()
 client.run(os.getenv('TOKEN'))

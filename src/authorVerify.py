@@ -1,4 +1,4 @@
-import global_variables as glob
+import src.global_variables as glob
 
 #pessoas
 bernardo = glob.bernardo

@@ -1,13 +1,12 @@
 [tool.poetry]
-name = "pantufittobot"
+name = "pantufobot-1"
 version = "0.1.0"
 description = ""
-authors = ["Your Name <you@example.com>"]
+authors = ["gumartin6 <<>>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
 discord = "^1.0.1"
-replit = "^3.0.0"
 flask = "^1.1.2"
 
 [tool.poetry.dev-dependencies]

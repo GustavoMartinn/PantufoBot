@@ -2,6 +2,7 @@
 bernardo = 'Mexy#7428'
 gui = 'cegueta777#3751'
 gustavo = 'Gustavin#1964'
+nath = 'Estelionathália#8802'
 
 #Contadores
 contadorGui = 0

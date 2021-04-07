@@ -1,6 +1,6 @@
 import requests
 import json
-from funcoes.calc import calcula
+from src.funcoes.calc import calcula
 
 def get_quote():
   resposta = requests.get("https://zenquotes.io/api/random")

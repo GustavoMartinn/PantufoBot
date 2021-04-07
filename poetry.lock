@@ -19,51 +19,6 @@ speedups = ["aiodns", "brotlipy", "cchardet"]
 
 [[package]]
 category = "main"
-description = "A database migration tool for SQLAlchemy."
-name = "alembic"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.4.3"
-
-[package.dependencies]
-Mako = "*"
-SQLAlchemy = ">=1.1.0"
-python-dateutil = "*"
-python-editor = ">=0.3"
-
-[[package]]
-category = "main"
-description = "A library for parsing ISO 8601 strings."
-name = "aniso8601"
-optional = false
-python-versions = "*"
-version = "9.0.1"
-
-[package.extras]
-dev = ["black", "coverage", "isort", "pre-commit", "pyenchant", "pylint"]
-
-[[package]]
-category = "main"
-description = ""
-name = "application"
-optional = false
-python-versions = "*"
-version = "1.0"
-
-[package.dependencies]
-Flask-Migrate = "2.3.0"
-Flask-MySQLdb = "0.2.0"
-Flask-RESTful = "0.3.6"
-Flask-SQLAlchemy = "2.1"
-SQLAlchemy = "1.2.13"
-flask = "*"
-flask-marshmallow = "0.9.0"
-marshmallow = "2.13.6"
-marshmallow-sqlalchemy = "0.15.0"
-mysqlclient = "1.3.13"
-
-[[package]]
-category = "main"
 description = "Timeout context manager for asyncio programs"
 name = "async-timeout"
 optional = false
@@ -117,7 +72,7 @@ description = "A Python wrapper for the Discord API"
 name = "discord.py"
 optional = false
 python-versions = ">=3.5.3"
-version = "1.7.0"
+version = "1.7.1"
 
 [package.dependencies]
 aiohttp = ">=3.6.0,<3.8.0"
@@ -144,74 +99,6 @@ itsdangerous = ">=0.24"
 dev = ["pytest", "coverage", "tox", "sphinx", "pallets-sphinx-themes", "sphinxcontrib-log-cabinet", "sphinx-issues"]
 docs = ["sphinx", "pallets-sphinx-themes", "sphinxcontrib-log-cabinet", "sphinx-issues"]
 dotenv = ["python-dotenv"]
-
-[[package]]
-category = "main"
-description = "Flask + marshmallow for beautiful APIs"
-name = "flask-marshmallow"
-optional = false
-python-versions = "*"
-version = "0.9.0"
-
-[package.dependencies]
-Flask = "*"
-marshmallow = ">=2.0.0"
-six = ">=1.9.0"
-
-[[package]]
-category = "main"
-description = "SQLAlchemy database migrations for Flask applications using Alembic"
-name = "flask-migrate"
-optional = false
-python-versions = "*"
-version = "2.3.0"
-
-[package.dependencies]
-Flask = ">=0.9"
-Flask-SQLAlchemy = ">=1.0"
-alembic = ">=0.7"
-
-[[package]]
-category = "main"
-description = "MySQLdb extension for Flask"
-name = "flask-mysqldb"
-optional = false
-python-versions = "*"
-version = "0.2.0"
-
-[package.dependencies]
-Flask = ">=0.10"
-mysqlclient = "*"
-
-[[package]]
-category = "main"
-description = "Simple framework for creating REST APIs"
-name = "flask-restful"
-optional = false
-python-versions = "*"
-version = "0.3.6"
-
-[package.dependencies]
-Flask = ">=0.8"
-aniso8601 = ">=0.82"
-pytz = "*"
-six = ">=1.3.0"
-
-[package.extras]
-docs = ["sphinx"]
-paging = ["pycrypto (>=2.6)"]
-
-[[package]]
-category = "main"
-description = "Adds SQLAlchemy support to your Flask application"
-name = "flask-sqlalchemy"
-optional = false
-python-versions = "*"
-version = "2.1"
-
-[package.dependencies]
-Flask = ">=0.10"
-SQLAlchemy = ">=0.7"
 
 [[package]]
 category = "main"
@@ -245,21 +132,6 @@ i18n = ["Babel (>=0.8)"]
 
 [[package]]
 category = "main"
-description = "A super-fast templating language that borrows the  best ideas from the existing templating languages."
-name = "mako"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "1.1.4"
-
-[package.dependencies]
-MarkupSafe = ">=0.9.2"
-
-[package.extras]
-babel = ["babel"]
-lingua = ["lingua"]
-
-[[package]]
-category = "main"
 description = "Safely add untrusted strings to HTML/XML markup."
 name = "markupsafe"
 optional = false
@@ -268,115 +140,11 @@ version = "1.1.1"
 
 [[package]]
 category = "main"
-description = "A lightweight library for converting complex datatypes to and from native Python datatypes."
-name = "marshmallow"
-optional = false
-python-versions = "*"
-version = "2.13.6"
-
-[package.extras]
-reco = ["python-dateutil", "simplejson"]
-
-[[package]]
-category = "main"
-description = "SQLAlchemy integration with the marshmallow (de)serialization library"
-name = "marshmallow-sqlalchemy"
-optional = false
-python-versions = "*"
-version = "0.15.0"
-
-[package.dependencies]
-SQLAlchemy = ">=0.9.7"
-marshmallow = ">=2.0.0"
-
-[package.extras]
-dev = ["pytest", "mock", "flake8 (3.6.0)", "pre-commit (1.12.0)", "tox"]
-lint = ["flake8 (3.6.0)", "pre-commit (1.12.0)"]
-tests = ["pytest", "mock"]
-
-[[package]]
-category = "main"
 description = "multidict implementation"
 name = "multidict"
 optional = false
 python-versions = ">=3.6"
 version = "5.1.0"
-
-[[package]]
-category = "main"
-description = "Python interface to MySQL"
-name = "mysqlclient"
-optional = false
-python-versions = "*"
-version = "1.3.13"
-
-[[package]]
-category = "main"
-description = "Extensions to the standard Python datetime module"
-name = "python-dateutil"
-optional = false
-python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
-version = "2.8.1"
-
-[package.dependencies]
-six = ">=1.5"
-
-[[package]]
-category = "main"
-description = "Programmatically open an editor, capture the result."
-name = "python-editor"
-optional = false
-python-versions = "*"
-version = "1.0.4"
-
-[[package]]
-category = "main"
-description = "World timezone definitions, modern and historical"
-name = "pytz"
-optional = false
-python-versions = "*"
-version = "2021.1"
-
-[[package]]
-category = "main"
-description = "A library for interacting with features of repl.it"
-name = "replit"
-optional = false
-python-versions = ">=3.8,<4.0"
-version = "3.0.0"
-
-[package.dependencies]
-aiohttp = ">=3.6.2,<4.0.0"
-flask = ">=1.1.2,<2.0.0"
-typing_extensions = ">=3.7.4,<4.0.0"
-werkzeug = ">=1.0.1,<2.0.0"
-
-[[package]]
-category = "main"
-description = "Python 2 and 3 compatibility utilities"
-name = "six"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
-version = "1.15.0"
-
-[[package]]
-category = "main"
-description = "Database Abstraction Library"
-name = "sqlalchemy"
-optional = false
-python-versions = "*"
-version = "1.2.13"
-
-[package.extras]
-mssql_pymssql = ["pymssql"]
-mssql_pyodbc = ["pyodbc"]
-mysql = ["mysqlclient"]
-oracle = ["cx-oracle"]
-postgresql = ["psycopg2"]
-postgresql_pg8000 = ["pg8000"]
-postgresql_psycopg2binary = ["psycopg2-binary"]
-postgresql_psycopg2cffi = ["psycopg2cffi"]
-pymysql = ["pymysql"]
 
 [[package]]
 category = "main"
@@ -411,7 +179,7 @@ idna = ">=2.0"
 multidict = ">=4.0"
 
 [metadata]
-content-hash = "57edefe932426d63f2a2bcc84b6a18249f50cf41730e77a64500f39cc36e5fc7"
+content-hash = "67179e68f36674eb3800ba17a69b0effefe435e61bc749fad79640b809325a2e"
 python-versions = "^3.8"
 
 [metadata.files]
@@ -454,17 +222,6 @@ aiohttp = [
     {file = "aiohttp-3.7.4.post0-cp39-cp39-win_amd64.whl", hash = "sha256:02f46fc0e3c5ac58b80d4d56eb0a7c7d97fcef69ace9326289fb9f1955e65cfe"},
     {file = "aiohttp-3.7.4.post0.tar.gz", hash = "sha256:493d3299ebe5f5a7c66b9819eacdcfbbaaf1a8e84911ddffcdc48888497afecf"},
 ]
-alembic = [
-    {file = "alembic-1.4.3-py2.py3-none-any.whl", hash = "sha256:4e02ed2aa796bd179965041afa092c55b51fb077de19d61835673cc80672c01c"},
-    {file = "alembic-1.4.3.tar.gz", hash = "sha256:5334f32314fb2a56d86b4c4dd1ae34b08c03cae4cb888bc699942104d66bc245"},
-]
-aniso8601 = [
-    {file = "aniso8601-9.0.1-py2.py3-none-any.whl", hash = "sha256:1d2b7ef82963909e93c4f24ce48d4de9e66009a21bf1c1e1c85bdd0812fe412f"},
-    {file = "aniso8601-9.0.1.tar.gz", hash = "sha256:72e3117667eedf66951bb2d93f4296a56b94b078a8a95905a052611fb3f1b973"},
-]
-application = [
-    {file = "application-1.0.tar.gz", hash = "sha256:865fe8d65325b6c69f730782192a51e2c6c09004f118c86b346b5c3be3e8cb09"},
-]
 async-timeout = [
     {file = "async-timeout-3.0.1.tar.gz", hash = "sha256:0c3c816a028d47f659d6ff5c745cb2acf1f966da1fe5c19c77a70282b25f4c5f"},
     {file = "async_timeout-3.0.1-py3-none-any.whl", hash = "sha256:4291ca197d287d274d0b6cb5d6f8f8f82d434ed288f962539ff18cc9012f9ea3"},
@@ -486,30 +243,12 @@ discord = [
     {file = "discord-1.0.1.tar.gz", hash = "sha256:ff6653655e342e7721dfb3f10421345fd852c2a33f2cca912b1c39b3778a9429"},
 ]
 "discord.py" = [
-    {file = "discord.py-1.7.0-py3-none-any.whl", hash = "sha256:330edfa11e59c1d1eae31e68f02f8cfcea2702813439dfe58dd587018979e1c9"},
-    {file = "discord.py-1.7.0.tar.gz", hash = "sha256:1b05150e767c4a18941d863d819844ecef8395b0ca3784055d78770b8fa70b68"},
+    {file = "discord.py-1.7.1-py3-none-any.whl", hash = "sha256:399b80d576a63fa901300e80080568e1d9cd9c21260ca622fd7145c0009278fa"},
+    {file = "discord.py-1.7.1.tar.gz", hash = "sha256:82bc5e6325ab7557db9c466f638c98e18be03c330f56ad9bf4c18bdcf19faf55"},
 ]
 flask = [
     {file = "Flask-1.1.2-py2.py3-none-any.whl", hash = "sha256:8a4fdd8936eba2512e9c85df320a37e694c93945b33ef33c89946a340a238557"},
     {file = "Flask-1.1.2.tar.gz", hash = "sha256:4efa1ae2d7c9865af48986de8aeb8504bf32c7f3d6fdc9353d34b21f4b127060"},
-]
-flask-marshmallow = [
-    {file = "flask-marshmallow-0.9.0.tar.gz", hash = "sha256:db7aff4130eb99fd05ab78fd2e2c58843ba0f208899aeb1c14aff9cd98ae8c80"},
-    {file = "flask_marshmallow-0.9.0-py2.py3-none-any.whl", hash = "sha256:75c9d80f22af982b1e8ccec109d3b75c14bb5570602ae3705a4ff775badd2816"},
-]
-flask-migrate = [
-    {file = "Flask-Migrate-2.3.0.tar.gz", hash = "sha256:a25b3d2d2bb0f0724f104afbadae888a4b942e7221b451f720c69698d4863da7"},
-    {file = "Flask_Migrate-2.3.0-py2.py3-none-any.whl", hash = "sha256:cb7d7b37feb68e3a8769aaf7a3954ecbdcd9bdeef8f21cede9eaa07c813f8af9"},
-]
-flask-mysqldb = [
-    {file = "Flask-MySQLdb-0.2.0.tar.gz", hash = "sha256:1003c3d72d61a34f1ce5b1cbe427f31816f0c561cee5cd60d8158431381c37d7"},
-]
-flask-restful = [
-    {file = "Flask-RESTful-0.3.6.tar.gz", hash = "sha256:5795519501347e108c436b693ff9a4d7b373a3ac9069627d64e4001c05dd3407"},
-    {file = "Flask_RESTful-0.3.6-py2.py3-none-any.whl", hash = "sha256:e2f1b8063de3944b94c7f8be5cee4d2161db0267c54c5b757d875295061776fa"},
-]
-flask-sqlalchemy = [
-    {file = "Flask-SQLAlchemy-2.1.tar.gz", hash = "sha256:c5244de44cc85d2267115624d83faef3f9e8f088756788694f305a5d5ad137c5"},
 ]
 idna = [
     {file = "idna-3.1-py3-none-any.whl", hash = "sha256:5205d03e7bcbb919cc9c19885f9920d622ca52448306f2377daede5cf3faac16"},
@@ -522,10 +261,6 @@ itsdangerous = [
 jinja2 = [
     {file = "Jinja2-2.11.3-py2.py3-none-any.whl", hash = "sha256:03e47ad063331dd6a3f04a43eddca8a966a26ba0c5b7207a9a9e4e08f1b29419"},
     {file = "Jinja2-2.11.3.tar.gz", hash = "sha256:a6d58433de0ae800347cab1fa3043cebbabe8baa9d29e668f1c768cb87a333c6"},
-]
-mako = [
-    {file = "Mako-1.1.4-py2.py3-none-any.whl", hash = "sha256:aea166356da44b9b830c8023cd9b557fa856bd8b4035d6de771ca027dfc5cc6e"},
-    {file = "Mako-1.1.4.tar.gz", hash = "sha256:17831f0b7087c313c0ffae2bcbbd3c1d5ba9eeac9c38f2eb7b50e8c99fe9d5ab"},
 ]
 markupsafe = [
     {file = "MarkupSafe-1.1.1-cp27-cp27m-macosx_10_6_intel.whl", hash = "sha256:09027a7803a62ca78792ad89403b1b7a73a01c8cb65909cd876f7fcebd79b161"},
@@ -581,14 +316,6 @@ markupsafe = [
     {file = "MarkupSafe-1.1.1-cp39-cp39-win_amd64.whl", hash = "sha256:b7d644ddb4dbd407d31ffb699f1d140bc35478da613b441c582aeb7c43838dd8"},
     {file = "MarkupSafe-1.1.1.tar.gz", hash = "sha256:29872e92839765e546828bb7754a68c418d927cd064fd4708fab9fe9c8bb116b"},
 ]
-marshmallow = [
-    {file = "marshmallow-2.13.6-py2.py3-none-any.whl", hash = "sha256:9f95c0d9ca063310a96134b55b12edfc3a1d963faa7b320e0d02352d11e0fecf"},
-    {file = "marshmallow-2.13.6.tar.gz", hash = "sha256:e3e83f11cade65fc78482a7620f01f82080f032b5fb51756e396635ebc711c75"},
-]
-marshmallow-sqlalchemy = [
-    {file = "marshmallow-sqlalchemy-0.15.0.tar.gz", hash = "sha256:5fc53b6fac10c3e0d0c3e1ba19312860b54534ffc56bc5d9615bf680f35a18de"},
-    {file = "marshmallow_sqlalchemy-0.15.0-py2.py3-none-any.whl", hash = "sha256:1a4813bbcd2a34f10b1fcad5f4ed85355739f39edb223e6cf68a95bd75807885"},
-]
 multidict = [
     {file = "multidict-5.1.0-cp36-cp36m-macosx_10_14_x86_64.whl", hash = "sha256:b7993704f1a4b204e71debe6095150d43b2ee6150fa4f44d6d966ec356a8d61f"},
     {file = "multidict-5.1.0-cp36-cp36m-manylinux1_i686.whl", hash = "sha256:9dd6e9b1a913d096ac95d0399bd737e00f2af1e1594a787e00f7975778c8b2bf"},
@@ -627,35 +354,6 @@ multidict = [
     {file = "multidict-5.1.0-cp39-cp39-win32.whl", hash = "sha256:fc13a9524bc18b6fb6e0dbec3533ba0496bbed167c56d0aabefd965584557d80"},
     {file = "multidict-5.1.0-cp39-cp39-win_amd64.whl", hash = "sha256:7df80d07818b385f3129180369079bd6934cf70469f99daaebfac89dca288359"},
     {file = "multidict-5.1.0.tar.gz", hash = "sha256:25b4e5f22d3a37ddf3effc0710ba692cfc792c2b9edfb9c05aefe823256e84d5"},
-]
-mysqlclient = [
-    {file = "mysqlclient-1.3.13.tar.gz", hash = "sha256:ff8ee1be84215e6c30a746b728c41eb0701a46ca76e343af445b35ce6250644f"},
-]
-python-dateutil = [
-    {file = "python-dateutil-2.8.1.tar.gz", hash = "sha256:73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"},
-    {file = "python_dateutil-2.8.1-py2.py3-none-any.whl", hash = "sha256:75bb3f31ea686f1197762692a9ee6a7550b59fc6ca3a1f4b5d7e32fb98e2da2a"},
-]
-python-editor = [
-    {file = "python-editor-1.0.4.tar.gz", hash = "sha256:51fda6bcc5ddbbb7063b2af7509e43bd84bfc32a4ff71349ec7847713882327b"},
-    {file = "python_editor-1.0.4-py2-none-any.whl", hash = "sha256:5f98b069316ea1c2ed3f67e7f5df6c0d8f10b689964a4a811ff64f0106819ec8"},
-    {file = "python_editor-1.0.4-py2.7.egg", hash = "sha256:ea87e17f6ec459e780e4221f295411462e0d0810858e055fc514684350a2f522"},
-    {file = "python_editor-1.0.4-py3-none-any.whl", hash = "sha256:1bf6e860a8ad52a14c3ee1252d5dc25b2030618ed80c022598f00176adc8367d"},
-    {file = "python_editor-1.0.4-py3.5.egg", hash = "sha256:c3da2053dbab6b29c94e43c486ff67206eafbe7eb52dbec7390b5e2fb05aac77"},
-]
-pytz = [
-    {file = "pytz-2021.1-py2.py3-none-any.whl", hash = "sha256:eb10ce3e7736052ed3623d49975ce333bcd712c7bb19a58b9e2089d4057d0798"},
-    {file = "pytz-2021.1.tar.gz", hash = "sha256:83a4a90894bf38e243cf052c8b58f381bfe9a7a483f6a9cab140bc7f702ac4da"},
-]
-replit = [
-    {file = "replit-3.0.0-py3-none-any.whl", hash = "sha256:3dd4f21b8b2a44b8c645a15e87398fa129b356cb6a88faa5eedd30374cc404e1"},
-    {file = "replit-3.0.0.tar.gz", hash = "sha256:7558e5ce46333062849b2c3be058a90d7769f6d7b1ad2382e78981cfaede2aa1"},
-]
-six = [
-    {file = "six-1.15.0-py2.py3-none-any.whl", hash = "sha256:8b74bedcbbbaca38ff6d7491d76f2b06b3592611af620f8426e82dddb04a5ced"},
-    {file = "six-1.15.0.tar.gz", hash = "sha256:30639c035cdb23534cd4aa2dd52c3bf48f06e5f4a941509c8bafd8ce11080259"},
-]
-sqlalchemy = [
-    {file = "SQLAlchemy-1.2.13.tar.gz", hash = "sha256:84412de3794acee05630e7788f25e80e81f78eb4837e7b71d0499129f660486a"},
 ]
 typing-extensions = [
     {file = "typing_extensions-3.7.4.3-py2-none-any.whl", hash = "sha256:dafc7639cde7f1b6e1acc0f457842a83e722ccca8eef5270af2d74792619a89f"},
