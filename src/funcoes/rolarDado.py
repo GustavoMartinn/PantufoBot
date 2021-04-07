@@ -1,14 +1,33 @@
 import random
 
-def rolarDado(mensagem):
-  try:
-    rolls, limit = map(int, mensagem.split('d'))
-  except Exception:
-    return('Format has to be in NdN!')
+def separarDados(dados):
+  return dados.split(' ')
 
-  result = ', '.join(str(random.randint(1, limit)) for r in range(rolls))
+def fazerRolagem(dado):
+  try:
+    roll, tamanho = map(int, dado.split('d'))
+  except Exception:
+    print("erro")
+    return('Format has to be in NdN!')
+  result = ', '.join(str(random.randint(1, tamanho)) for r in range(roll))
   soma = eval('+ '.join(result.split(', ')))
-  if (rolls == 1):
-    return('A rolagem resultou em: ' + result)
-  else: 
-    return('A soma dos dados rolados é: **' + str(soma) + '** Os dados rolados são: ' + result)
+  return result, soma, roll
+
+
+def rolarDado(mensagem):
+  dados = separarDados(mensagem)
+  resultadoFinal = []
+  somaFinal = 0
+  qtdDados = 0
+  for val in dados:
+    resultado,soma, qtd = fazerRolagem(val)
+    resultadoFinal.append(str(val)+"🎲: "+str(resultado)+" = "+str(soma))
+    somaFinal += int(soma)
+    qtdDados += qtd
+  if(len(dados)>1):
+    retorno = (('\n'.join(resultadoFinal))+"\nSoma total = "+str(somaFinal))
+  elif(qtdDados>1):
+    retorno = resultadoFinal[0]
+  else:
+    retorno = resultadoFinal[0].split('=')[0]
+  return str(retorno)

@@ -61,4 +61,5 @@ async def on_message(mensagem):
       return
 
 keep_alive()
+#TOKEN dado pelo Discord Developer Portal
 client.run(os.getenv('TOKEN'))
