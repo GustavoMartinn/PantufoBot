@@ -30,35 +30,27 @@ async def on_message(mensagem):
     
     #Comandos
     if msg.startswith('&'):
-      await mandarMensagem(comandosBasicos(msg), mensagem.channel)
+      await mandarMensagem(comandosBasicos(msg, mensagem.author), mensagem.channel)
     elif msg.startswith('pantufo'):
-      try:
-        await mensagem.channel.send(comandosBasicos(msg))
-      except:
-        print('Comando invalido')
-      return
+      await mandarMensagem(comandosBasicos(msg,mensagem.author), mensagem.channel)
     elif msg.startswith('é bolsonaro ou não é'):
-      await mensagem.channel.send("ééééééé")
-      return
+      await mandarMensagem("ééééééé", mensagem.channel)
     elif msg.startswith('oi pantufo, td bem?'):
-      await mensagem.channel.send("tudo otimo, e com vc?")
-      return
+      await mandarMensagem("tudo otimo, e com vc?", mensagem.channel)
     elif msg.startswith('obrigado pantufo'):
-      await mensagem.channel.send("magina")
-      return
+      await mandarMensagem("magina", mensagem.channel)
 
     #Palavras
     for word in msg.split(' '):
       palavra = wordsVerify(word)
       if bool(palavra) ==  True:
-        await mensagem.channel.send(palavra)
+        await mandarMensagem(palavra, mensagem.channel)
         return
     
     #Autor
-    try:
-      await mensagem.channel.send(authorVerify(mensagem))
-    except:
-      return
+    frase = authorVerify(mensagem)
+    if frase != None:
+      await mandarMensagem(frase, mensagem.channel)
 
 keep_alive()
 #TOKEN dado pelo Discord Developer Portal

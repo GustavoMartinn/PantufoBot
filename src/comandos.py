@@ -9,7 +9,7 @@ def get_quote():
   quote = json_data[0]['q'] + " -" + json_data[0]['a']
   return(quote)
 
-def comandosBasicos(mensagem):
+def comandosBasicos(mensagem, autor):
   #saudação
   if mensagem.startswith('&ola'):
     return ('Olá!')
@@ -26,11 +26,11 @@ def comandosBasicos(mensagem):
     return(calcula(mensagem[16:]))
   #Rolagem de dados
   elif mensagem.startswith('&rolar'):
-    return(str(rolarDado(mensagem[7:])))
+    return(str(rolarDado(mensagem[7:]," ")))
   elif mensagem.startswith('&roll'):
-    return(str(rolarDado(mensagem[6:])))
+    return(str(rolarDado(mensagem[6:], ' ')))
   elif mensagem.startswith('pantufo role'):
-    return(str(rolarDado(mensagem[13:])))
+    return(str(rolarDado(mensagem[13:], autor)))
   #superioridade 
   elif mensagem.startswith('pantufo > loritta'):
     return ('Sou mesmo 😎')
