@@ -17,10 +17,10 @@ def typing(channel, user, when):
   #
 
   if (str(user) == glob.bernardo):
-    rand = random.randint(1, 10)
-    if (rand == 10):
+    rand = random.randint(1, 100)
+    if (rand == 100):
       return('Vai estudar bernardo vagabundo')
   elif ((str(user) == glob.nath)) and (int(hora) >= 3 and int(hora) <= 6):
-    rand = random.randint(1, 8)
-    if (rand == 8):
+    rand = random.randint(1, 80)
+    if (rand == 80):
       return('Nath, vai dormi, ja são ' + hora + ':' + restoHora)

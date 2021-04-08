@@ -10,4 +10,4 @@ contadorBe = 0
 contadorGu = 0
 
 #Defines
-respostaUser = 5
+respostaUser = 50

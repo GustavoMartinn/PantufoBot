@@ -20,10 +20,10 @@ def rolarDado(mensagem):
   somaFinal = 0
   qtdDados = 0
   for val in dados:
-    resultado,soma, qtd = fazerRolagem(val)
-    resultadoFinal.append(str(val)+"🎲: "+str(resultado)+" = "+str(soma))
-    somaFinal += int(soma)
-    qtdDados += qtd
+      resultado,soma, qtd = fazerRolagem(val)
+      resultadoFinal.append(str(val)+"🎲: "+str(resultado)+" = "+str(soma))
+      somaFinal += int(soma)
+      qtdDados += qtd
   if(len(dados)>1):
     retorno = (('\n'.join(resultadoFinal))+"\nSoma total = "+str(somaFinal))
   elif(qtdDados>1):

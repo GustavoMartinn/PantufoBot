@@ -6,6 +6,7 @@ from src.comandos import comandosBasicos
 from src.wordsVerify import wordsVerify
 from src.authorVerify import authorVerify
 from src.onTypingFunc import typing
+from src.mandarMensagem import mandarMensagem
 
 client = discord.Client()
 
@@ -29,11 +30,7 @@ async def on_message(mensagem):
     
     #Comandos
     if msg.startswith('&'):
-      try:
-        await mensagem.channel.send(comandosBasicos(msg))
-      except:
-        print('Comando invalido')
-      return
+      await mandarMensagem(comandosBasicos(msg), mensagem.channel)
     elif msg.startswith('pantufo'):
       try:
         await mensagem.channel.send(comandosBasicos(msg))
@@ -42,6 +39,9 @@ async def on_message(mensagem):
       return
     elif msg.startswith('é bolsonaro ou não é'):
       await mensagem.channel.send("ééééééé")
+      return
+    elif msg.startswith('oi pantufo, td bem?'):
+      await mensagem.channel.send("tudo otimo, e com vc?")
       return
     elif msg.startswith('obrigado pantufo'):
       await mensagem.channel.send("magina")

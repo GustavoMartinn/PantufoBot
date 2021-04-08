@@ -31,6 +31,9 @@ def comandosBasicos(mensagem):
     return(str(rolarDado(mensagem[6:])))
   elif mensagem.startswith('pantufo role'):
     return(str(rolarDado(mensagem[13:])))
+  #superioridade 
+  elif mensagem.startswith('pantufo > loritta'):
+    return ('Sou mesmo 😎')
   #agradecimento
   if mensagem.startswith('&obrigado'):
     return ('magina')

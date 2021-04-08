@@ -30,5 +30,5 @@ def authorVerify(mensagem):
   elif(str(mensagem.author)) ==  (gustavo):
     if guCount == respostaUser:
       guCount = 0
-      return ('Oi lindo')
+      return ('Oi gustavo, seu lindo')
     guCount += 1
